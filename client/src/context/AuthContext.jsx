@@ -19,6 +19,24 @@ export function AuthProvider({ children }) {
 
   const hideToast = () => setToast(null);
 
+  const fetchProfile = async () => {
+    try {
+      const res = await getMeApi();
+      if (res?.user) {
+        setUser(res.user);
+        localStorage.setItem("user", JSON.stringify(res.user));
+        return res.user;
+      }
+      return null;
+    } catch (err) {
+      console.warn("Could not fetch current user profile:", err.message);
+      if (err.status === 401) {
+        setUser(null);
+      }
+      throw err;
+    }
+  };
+
   // Load initial user from token / localStorage
   useEffect(() => {
     const initAuth = async () => {
@@ -35,17 +53,9 @@ export function AuthProvider({ children }) {
 
       if (token) {
         try {
-          const res = await getMeApi();
-          if (res?.user) {
-            setUser(res.user);
-            localStorage.setItem("user", JSON.stringify(res.user));
-          }
+          await fetchProfile();
         } catch (err) {
-          console.warn("Could not fetch current user:", err.message);
-          // if invalid token, clear
-          if (err.status === 401) {
-            setUser(null);
-          }
+          // handled in fetchProfile
         }
       }
       setLoading(false);
@@ -96,6 +106,8 @@ export function AuthProvider({ children }) {
         register,
         logout,
         changePassword,
+        getMe: fetchProfile,
+        getMeApi: fetchProfile,
         setAuthUser,
         toast,
         showToast,
@@ -114,4 +126,3 @@ export function useAuth() {
   }
   return context;
 }
-

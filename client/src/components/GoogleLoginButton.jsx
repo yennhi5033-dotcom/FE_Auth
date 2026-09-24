@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../firebase";
 
@@ -38,6 +38,7 @@ export default function GoogleLoginButton({ onLoginSuccess, onLoginFailure }) {
 
       if (onLoginSuccess) {
         onLoginSuccess(data);
+        window.location.href = "/profile";
       }
     } catch (error) {
       console.error("Lỗi Google Sign-In:", error);

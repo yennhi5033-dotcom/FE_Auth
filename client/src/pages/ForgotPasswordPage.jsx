@@ -60,7 +60,6 @@ export function ForgotPasswordPage() {
           </Link>
 
           <div className="flex flex-col items-center text-center">
-            {/* Blue Mail Icon Circle */}
             <div className="w-20 h-20 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-6 shadow-sm">
               <Mail className="w-9 h-9" />
             </div>
@@ -102,7 +101,7 @@ export function ForgotPasswordPage() {
                     if (error) setError("");
                   }}
                   placeholder="Nhập email của bạn"
-                  className={`w-full px-3.5 py-2.5 text-xs sm:text-sm bg-slate-50 border rounded-xl focus:outline-none focus:bg-white transition-all ${
+                  className={`w-full px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 bg-white border rounded-xl focus:outline-none transition-all ${
                     error
                       ? "border-red-400 focus:ring-2 focus:ring-red-200"
                       : "border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"

@@ -150,7 +150,7 @@ export function RegisterPage() {
                       if (errors.name) setErrors({ ...errors, name: null });
                     }}
                     placeholder="Nhập họ và tên"
-                    className={`w-full px-3.5 py-2 text-xs sm:text-sm bg-slate-50 border rounded-xl focus:outline-none focus:bg-white transition-all ${
+                    className={`w-full px-3.5 py-2 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 bg-white border rounded-xl focus:outline-none transition-all ${
                       errors.name
                         ? "border-red-400 focus:ring-2 focus:ring-red-200"
                         : "border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
@@ -173,7 +173,7 @@ export function RegisterPage() {
                       if (errors.email) setErrors({ ...errors, email: null });
                     }}
                     placeholder="Nhập email của bạn"
-                    className={`w-full px-3.5 py-2 text-xs sm:text-sm bg-slate-50 border rounded-xl focus:outline-none focus:bg-white transition-all ${
+                    className={`w-full px-3.5 py-2 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 bg-white border rounded-xl focus:outline-none transition-all ${
                       errors.email
                         ? "border-red-400 focus:ring-2 focus:ring-red-200"
                         : "border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
@@ -197,7 +197,7 @@ export function RegisterPage() {
                         if (errors.password) setErrors({ ...errors, password: null });
                       }}
                       placeholder="Nhập mật khẩu (tối thiểu 6 ký tự)"
-                      className={`w-full px-3.5 py-2 pr-10 text-xs sm:text-sm bg-slate-50 border rounded-xl focus:outline-none focus:bg-white transition-all ${
+                      className={`w-full px-3.5 py-2 pr-10 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 bg-white border rounded-xl focus:outline-none transition-all ${
                         errors.password
                           ? "border-red-400 focus:ring-2 focus:ring-red-200"
                           : "border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
@@ -230,7 +230,7 @@ export function RegisterPage() {
                           setErrors({ ...errors, confirmPassword: null });
                       }}
                       placeholder="Nhập lại mật khẩu"
-                      className={`w-full px-3.5 py-2 pr-10 text-xs sm:text-sm bg-slate-50 border rounded-xl focus:outline-none focus:bg-white transition-all ${
+                      className={`w-full px-3.5 py-2 pr-10 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 bg-white border rounded-xl focus:outline-none transition-all ${
                         errors.confirmPassword
                           ? "border-red-400 focus:ring-2 focus:ring-red-200"
                           : "border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
@@ -257,7 +257,7 @@ export function RegisterPage() {
                   <select
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
-                    className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500"
+                    className="w-full px-3 py-2 text-xs text-slate-900 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500"
                   >
                     <option value="user">Người dùng thông thường (User)</option>
                     <option value="admin">Quản trị viên (Admin)</option>

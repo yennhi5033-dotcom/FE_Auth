@@ -68,7 +68,6 @@ export function ResetPasswordPage() {
       <div className="flex-1 flex items-center justify-center p-4 sm:p-6">
         <div className="w-full max-w-lg bg-white rounded-3xl shadow-xl border border-slate-100 p-8 sm:p-10 relative">
           <div className="flex flex-col items-center text-center">
-            {/* Blue Lock Icon Circle */}
             <div className="w-20 h-20 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-6 shadow-sm">
               <Lock className="w-9 h-9" />
             </div>
@@ -105,7 +104,7 @@ export function ResetPasswordPage() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Tối thiểu 6 ký tự"
-                    className="w-full px-3.5 py-2.5 pr-10 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:bg-white focus:border-blue-500 transition-all"
+                    className="w-full px-3.5 py-2.5 pr-10 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 transition-all"
                   />
                   <button
                     type="button"
@@ -127,7 +126,7 @@ export function ResetPasswordPage() {
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     placeholder="Nhập lại mật khẩu"
-                    className="w-full px-3.5 py-2.5 pr-10 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:bg-white focus:border-blue-500 transition-all"
+                    className="w-full px-3.5 py-2.5 pr-10 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 transition-all"
                   />
                   <button
                     type="button"
@@ -150,7 +149,6 @@ export function ResetPasswordPage() {
                 <span>Cập nhật mật khẩu</span>
               </button>
 
-              {/* Error banner as in design 4 */}
               {error && (
                 <div className="p-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-xs flex items-center gap-2 mt-4">
                   <AlertCircle className="w-4 h-4 shrink-0" />

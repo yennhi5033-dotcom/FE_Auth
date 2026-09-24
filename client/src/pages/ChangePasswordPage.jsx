@@ -92,7 +92,7 @@ export function ChangePasswordPage() {
                   if (success) setSuccess(false);
                 }}
                 placeholder="Nhập mật khẩu hiện tại"
-                className="w-full px-3.5 py-2.5 pr-10 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:bg-white focus:border-blue-500 transition-all"
+                className="w-full px-3.5 py-2.5 pr-10 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 transition-all"
               />
               <button
                 type="button"
@@ -119,7 +119,7 @@ export function ChangePasswordPage() {
                   if (success) setSuccess(false);
                 }}
                 placeholder="Tối thiểu 6 ký tự"
-                className="w-full px-3.5 py-2.5 pr-10 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:bg-white focus:border-blue-500 transition-all"
+                className="w-full px-3.5 py-2.5 pr-10 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 transition-all"
               />
               <button
                 type="button"
